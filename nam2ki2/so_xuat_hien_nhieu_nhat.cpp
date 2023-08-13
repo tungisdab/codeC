@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef double db;
+//by KMA dil and man
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int t;
+    cin>>t;
+    while (t--)
+    {
+        int n;
+        cin>>n;
+        int a[n];
+        map<int, int> b;
+        for (int i=0;i<n;i++){
+            cin>>a[i];
+            b[a[i]]++;
+        }   
+        int h=0;
+        for(auto i:b){
+            if (i.second>(n/2)){
+                cout<<i.first<<endl;
+                h=1;
+            }
+                
+        }
+        if (!h) cout<<"NO"<<endl;
+    }   
+    return 0;
+}
